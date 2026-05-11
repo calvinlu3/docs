@@ -1,0 +1,136 @@
+{
+  "projectType": "api-service",
+  "projectName": "OncoKB",
+  "projectDescription": "OncoKB is a precision oncology knowledge base providing curated variant annotation, therapeutic levels of evidence, and clinical data through a REST API.",
+  "theme": "luma",
+  "primaryColor": "#0c447b",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "authentication"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/genes-variants",
+              "concepts/levels-of-evidence",
+              "concepts/oncogenicity",
+              "concepts/cancer-types"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/annotate-variants",
+              "guides/cancer-gene-list",
+              "guides/batch-queries",
+              "guides/germline-annotation"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/setup",
+              "configuration/caching",
+              "configuration/genome-nexus"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/overview",
+              "api/versioning"
+            ]
+          },
+          {
+            "group": "Annotation",
+            "pages": [
+              "api/annotate-protein-change",
+              "api/annotate-genomic-change",
+              "api/annotate-hgvsg",
+              "api/annotate-cna",
+              "api/annotate-structural-variants",
+              "api/annotate-germline"
+            ]
+          },
+          {
+            "group": "Genes & Variants",
+            "pages": [
+              "api/genes",
+              "api/evidences",
+              "api/search"
+            ]
+          },
+          {
+            "group": "Data Downloads",
+            "pages": [
+              "api/cancer-gene-list",
+              "api/annotated-variants",
+              "api/actionable-variants",
+              "api/levels"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Somatic variant annotation by protein change, genomic change, HGVSg, or HGVSc",
+    "Germline variant annotation",
+    "Copy number alteration (CNA) and structural variant (fusion) annotation",
+    "Therapeutic levels of evidence (Level 1–4, R1–R2) for FDA-approved and investigational therapies",
+    "Diagnostic and prognostic implication levels",
+    "Cancer gene list with panel coverage flags (MSK-IMPACT, Foundation Medicine, etc.)",
+    "Batch annotation for entire sample mutational profiles",
+    "Curated gene and variant evidence database",
+    "GRCh37 and GRCh38 reference genome support",
+    "Integration with Genome Nexus for genomic coordinate annotation",
+    "Free public tier and premium API access"
+  ],
+  "publicApiSurface": [
+    "GET/POST /api/v1/annotate/mutations/byProteinChange",
+    "GET/POST /api/v1/annotate/mutations/byGenomicChange",
+    "GET/POST /api/v1/annotate/mutations/byHGVSg",
+    "GET/POST /api/v1/annotate/mutations/byHGVSc",
+    "GET/POST /api/v1/annotate/copyNumberAlterations",
+    "GET/POST /api/v1/annotate/structuralVariants",
+    "POST /api/v1/annotate/sample",
+    "GET/POST /api/v1/annotate/germline/mutations/byGenomicChange",
+    "GET/POST /api/v1/annotate/germline/mutations/byHGVSg",
+    "GET/POST /api/v1/annotate/germline/mutations/byHGVSc",
+    "GET /api/v1/genes",
+    "GET /api/v1/genes/{entrezGeneId}",
+    "GET /api/v1/genes/{entrezGeneId}/variants",
+    "GET /api/v1/genes/{entrezGeneId}/evidences",
+    "GET /api/v1/genes/lookup",
+    "GET /api/v1/evidences/lookup",
+    "POST /api/v1/evidences/lookup",
+    "GET/POST /api/v1/search",
+    "GET /api/v1/utils/cancerGeneList",
+    "GET /api/v1/utils/allCuratedGenes",
+    "GET /api/v1/utils/allAnnotatedVariants",
+    "GET /api/v1/utils/allActionableVariants",
+    "GET /api/v1/utils/allVariantsOfUnknownSignificance",
+    "GET /api/v1/levels",
+    "GET /api/v1/levels/sensitive",
+    "GET /api/v1/levels/resistance",
+    "GET /api/v1/levels/prognostic",
+    "GET /api/v1/levels/diagnostic",
+    "GET /api/v1/info"
+  ]
+}

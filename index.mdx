@@ -1,0 +1,59 @@
+---
+title: "OncoKB: Precision Oncology Knowledge Base"
+description: "OncoKB is a curated knowledge base of oncogenic variants and their clinical significance. Query genes, annotate mutations, and retrieve evidence-based treatment levels."
+---
+
+OncoKB provides structured, evidence-based annotation for somatic and germline genomic alterations in cancer. Through its REST API, you can annotate mutations by protein change, genomic coordinates, or HGVS notation, and receive curated therapeutic, diagnostic, and prognostic levels of evidence tied to specific tumor types.
+
+<CardGroup cols={2}>
+  <Card title="Quick Start" icon="rocket" href="/quickstart">
+    Make your first API call and annotate a variant in minutes.
+  </Card>
+  <Card title="Authentication" icon="key" href="/authentication">
+    Get your API token and learn how to authenticate requests.
+  </Card>
+  <Card title="Annotation Guides" icon="dna" href="/guides/annotate-variants">
+    Step-by-step guides for annotating mutations, CNAs, and fusions.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api/overview">
+    Full reference for every public endpoint with request and response schemas.
+  </Card>
+</CardGroup>
+
+## What you can do with OncoKB
+
+<CardGroup cols={2}>
+  <Card title="Annotate Somatic Variants" icon="circle-dot" href="/api/annotate-protein-change">
+    Submit mutations by protein change (e.g. BRAF V600E), genomic location, or HGVS format and receive oncogenicity classifications and treatment levels.
+  </Card>
+  <Card title="Annotate Germline Variants" icon="user-dna" href="/api/annotate-germline">
+    Query germline alterations and retrieve pathogenicity, penetrance, and cancer risk evidence.
+  </Card>
+  <Card title="Download Cancer Gene Lists" icon="download" href="/api/cancer-gene-list">
+    Access the full OncoKB cancer gene list, annotated variants, and actionable variants in JSON or TSV format.
+  </Card>
+  <Card title="Explore Levels of Evidence" icon="chart-bar" href="/concepts/levels-of-evidence">
+    Understand OncoKB's tiered evidence system — from FDA-approved biomarkers (Level 1) to investigational findings (Level 4).
+  </Card>
+</CardGroup>
+
+## How it works
+
+<Steps>
+  <Step title="Get access">
+    Register at [oncokb.org](https://www.oncokb.org) and obtain an API token. Public endpoints are available without a token; premium endpoints require one.
+  </Step>
+  <Step title="Authenticate your requests">
+    Include your token as a Bearer token in the `Authorization` header of every API request.
+  </Step>
+  <Step title="Submit a variant query">
+    Call any annotation endpoint — by protein change, genomic change, HGVSg, CNA, or structural variant — and receive a structured JSON response.
+  </Step>
+  <Step title="Interpret the response">
+    The response includes oncogenicity, mutation effect, therapeutic level, treatment options, and supporting literature — all tied to the specific tumor type you queried.
+  </Step>
+</Steps>
+
+<Note>
+  OncoKB is developed at Memorial Sloan Kettering Cancer Center. For questions or access requests, email [contact@oncokb.org](mailto:contact@oncokb.org).
+</Note>

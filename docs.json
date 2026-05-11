@@ -1,0 +1,18 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "OncoKB",
+  "favicon": "https://media.brand.dev/9a9ab973-4541-47ec-be41-2e0270304a5e.png",
+  "colors": {
+    "primary": "#0c447b"
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/oncokb/oncokb"
+    }
+  },
+  "navigation": {
+    "groups": []
+  }
+}
